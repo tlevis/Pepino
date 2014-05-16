@@ -10,11 +10,16 @@ Download Pepino image (based on Raspbian): [pepino-2014-05-16.rar](http://pepino
 
 # To Do
 
-__User Interface__
+__Software__
 - Add more components (operators, sensors, functions, etc.)
-- Fix the image hostname
 - Upgrade to the latest jsPlumb library
 
 __Hardware__
 - Redesign the PCB
 - Redesign the case
+- Add chip select to Lego sensor ports
+
+__General__
+- Fix the image hostname
+- Add python program to interact with the serial output
+- Enable the LCD menu buttons
