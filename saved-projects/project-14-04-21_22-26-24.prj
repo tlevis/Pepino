@@ -1,0 +1,226 @@
+{
+    "ProjectName": "Demo - Fade",
+    "ProjectDescription": "Arduino fade example",
+    "CurrentIndex": 9,
+    "Ports": [],
+    "ObjArray": {
+        "Main1": {
+            "Chain": {
+                "Next": "Loop5"
+            },
+            "Name": "Main",
+            "Id": "Main1",
+            "Position": {
+                "X": "80px",
+                "Y": "120px"
+            },
+            "SetupMode": false
+        },
+        "LED4": {
+            "Chain": {
+                "Next": "Delay7"
+            },
+            "Name": "LED",
+            "Id": "LED4",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": "1",
+            "PWMValues": ["0", "Loop5_i", ""],
+            "Position": {
+                "X": "354px",
+                "Y": "387px"
+            },
+            "SetupMode": false,
+            "PWMSourceValue": "1",
+            "PassedVariables": ["Loop5_i"]
+        },
+        "Loop5": {
+            "Chain": {
+                "Condition": null,
+                "Loop": "LED4",
+                "Next": "Loop6"
+            },
+            "ChainIn": {
+                "Condition": true
+            },
+            "Name": "Loop",
+            "Id": "Loop5",
+            "Position": {
+                "X": "268px",
+                "Y": "200px"
+            },
+            "SetupMode": false,
+            "LoopType": "for",
+            "ForMaxValue": 255,
+            "ForMinValue": 0,
+            "ForDirection": 1,
+            "ForStep": 1,
+            "PassedVariables": ["Loop5_i"]
+        },
+        "Loop6": {
+            "Chain": {
+                "Condition": null,
+                "Loop": "LED8",
+                "Next": null
+            },
+            "ChainIn": {
+                "Condition": true
+            },
+            "Name": "Loop",
+            "Id": "Loop6",
+            "Position": {
+                "X": "743px",
+                "Y": "202px"
+            },
+            "SetupMode": false,
+            "LoopType": "for",
+            "ForMaxValue": 255,
+            "ForMinValue": 0,
+            "ForDirection": 1,
+            "ForStep": 1,
+            "PassedVariables": ["Loop6_i"]
+        },
+        "Delay7": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "Delay",
+            "Id": "Delay7",
+            "Category": "Functional",
+            "Type": 1,
+            "Source": 0,
+            "Values": ["10", ""],
+            "Position": {
+                "X": "533px",
+                "Y": "390px"
+            },
+            "SetupMode": false
+        },
+        "LED8": {
+            "Chain": {
+                "Next": "Delay9"
+            },
+            "Name": "LED",
+            "Id": "LED8",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": "1",
+            "PWMValues": ["0", "Loop6_i", ""],
+            "Position": {
+                "X": "840px",
+                "Y": "389px"
+            },
+            "SetupMode": false,
+            "PWMSourceValue": "1",
+            "PassedVariables": ["Loop6_i"]
+        },
+        "Delay9": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "Delay",
+            "Id": "Delay9",
+            "Category": "Functional",
+            "Type": 1,
+            "Source": 0,
+            "Values": ["10", ""],
+            "Position": {
+                "X": "1024px",
+                "Y": "395px"
+            },
+            "SetupMode": false
+        }
+    },
+    "ObjectsOnSetupAreaMap": {
+        "Board2": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "Board",
+            "Id": "Board2",
+            "Position": {
+                "X": "562px",
+                "Y": "378.5px"
+            },
+            "SetupMode": true
+        },
+        "LED3": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED3",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "568px",
+                "Y": "138px"
+            },
+            "SetupMode": true,
+            "PWMSourceValue": 0
+        }
+    },
+    "ConnectedObjectsMap": {
+        "LED3": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED3",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "568px",
+                "Y": "138px"
+            },
+            "SetupMode": true,
+            "PWMSourceValue": 0
+        }
+    },
+    "RegisteredValuesMap": {},
+    "ConnectionsMap": {
+        "LED3_OutConnection_NextBoard2_InConnectionDigital_1": {
+            "Area": "device-setup-area",
+            "Source": "LED3_OutConnection_Next",
+            "Target": "Board2_InConnectionDigital_1"
+        },
+        "Main1_OutConnection_NextLoop5_InConnection": {
+            "Area": "working-area",
+            "Source": "Main1_OutConnection_Next",
+            "Target": "Loop5_InConnection"
+        },
+        "Loop5_OutConnection_NextLoop6_InConnection": {
+            "Area": "working-area",
+            "Source": "Loop5_OutConnection_Next",
+            "Target": "Loop6_InConnection"
+        },
+        "Loop5_OutConnection_LoopLED4_InConnection": {
+            "Area": "working-area",
+            "Source": "Loop5_OutConnection_Loop",
+            "Target": "LED4_InConnection"
+        },
+        "LED4_OutConnection_NextDelay7_InConnection": {
+            "Area": "working-area",
+            "Source": "LED4_OutConnection_Next",
+            "Target": "Delay7_InConnection"
+        },
+        "Loop6_OutConnection_LoopLED8_InConnection": {
+            "Area": "working-area",
+            "Source": "Loop6_OutConnection_Loop",
+            "Target": "LED8_InConnection"
+        },
+        "LED8_OutConnection_NextDelay9_InConnection": {
+            "Area": "working-area",
+            "Source": "LED8_OutConnection_Next",
+            "Target": "Delay9_InConnection"
+        }
+    }
+}

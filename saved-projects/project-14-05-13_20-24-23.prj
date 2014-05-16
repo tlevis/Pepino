@@ -1,0 +1,189 @@
+{
+    "ProjectName": "Demo - Analog read",
+    "ProjectDescription": "LED brightness according to photocell values",
+    "CurrentIndex": 7,
+    "Ports": [],
+    "ObjArray": {
+        "Main1": {
+            "Chain": {
+                "Next": "Photoresistor5"
+            },
+            "Name": "Main",
+            "Id": "Main1",
+            "Position": {
+                "X": "109px",
+                "Y": "183px"
+            },
+            "SetupMode": false
+        },
+        "Photoresistor5": {
+            "Chain": {
+                "Next": "LED6"
+            },
+            "Name": "Photoresistor",
+            "Id": "Photoresistor5",
+            "Category": "Analog",
+            "Port": "A0",
+            "Position": {
+                "X": "296px",
+                "Y": "224px"
+            },
+            "SetupMode": false,
+            "Variables": ["Photoresistor5_0"],
+            "PassedVariables": []
+        },
+        "LED6": {
+            "Chain": {
+                "Next": "Delay7"
+            },
+            "Name": "LED",
+            "Id": "LED6",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": "1",
+            "PWMValues": ["0", "", "Photoresistor5_analogValue"],
+            "Position": {
+                "X": "484px",
+                "Y": "231px"
+            },
+            "SetupMode": false,
+            "PWMSourceValue": "2",
+            "PassedVariables": []
+        },
+        "Delay7": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "Delay",
+            "Id": "Delay7",
+            "Category": "Functional",
+            "Type": 1,
+            "Source": 0,
+            "Values": ["200", ""],
+            "Position": {
+                "X": "684px",
+                "Y": "236px"
+            },
+            "SetupMode": false,
+            "PassedVariables": []
+        }
+    },
+    "ObjectsOnSetupAreaMap": {
+        "Board2": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "Board",
+            "Id": "Board2",
+            "Position": {
+                "X": "505px",
+                "Y": "318px"
+            },
+            "SetupMode": true
+        },
+        "LED3": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED3",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "552px",
+                "Y": "118px"
+            },
+            "SetupMode": true,
+            "PWMSourceValue": 0
+        },
+        "Photoresistor4": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "Photoresistor",
+            "Id": "Photoresistor4",
+            "Category": "Analog",
+            "Port": "A0",
+            "Position": {
+                "X": "542px",
+                "Y": "680px"
+            },
+            "SetupMode": true,
+            "Variables": []
+        }
+    },
+    "ConnectedObjectsMap": {
+        "LED3": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED3",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "552px",
+                "Y": "118px"
+            },
+            "SetupMode": true,
+            "PWMSourceValue": 0
+        },
+        "Photoresistor4": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "Photoresistor",
+            "Id": "Photoresistor4",
+            "Category": "Analog",
+            "Port": "A0",
+            "Position": {
+                "X": "542px",
+                "Y": "680px"
+            },
+            "SetupMode": true,
+            "Variables": []
+        }
+    },
+    "RegisteredValuesMap": {
+        "Photoresistor5_0": {
+            "ObjectId": "Photoresistor5",
+            "FriendlyName": " analog value",
+            "VariableName": "Photoresistor5_analogValue",
+            "ValueType": "int"
+        }
+    },
+    "ConnectionsMap": {
+        "LED3_OutConnection_NextBoard2_InConnectionDigital_1": {
+            "Area": "device-setup-area",
+            "Source": "LED3_OutConnection_Next",
+            "Target": "Board2_InConnectionDigital_1"
+        },
+        "Photoresistor4_OutConnection_NextBoard2_InConnectionAnalog_0": {
+            "Area": "device-setup-area",
+            "Source": "Photoresistor4_OutConnection_Next",
+            "Target": "Board2_InConnectionAnalog_0"
+        },
+        "Main1_OutConnection_NextPhotoresistor5_InConnection": {
+            "Area": "working-area",
+            "Source": "Main1_OutConnection_Next",
+            "Target": "Photoresistor5_InConnection"
+        },
+        "Photoresistor5_OutConnection_NextLED6_InConnection": {
+            "Area": "working-area",
+            "Source": "Photoresistor5_OutConnection_Next",
+            "Target": "LED6_InConnection"
+        },
+        "LED6_OutConnection_NextDelay7_InConnection": {
+            "Area": "working-area",
+            "Source": "LED6_OutConnection_Next",
+            "Target": "Delay7_InConnection"
+        }
+    }
+}

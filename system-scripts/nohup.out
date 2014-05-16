@@ -1,0 +1,8 @@
+MPlayer svn r34540 (Debian), built with gcc-4.6 (C) 2000-2012 MPlayer Team
+
+Playing /var/www/system-scripts/welcome.mp4.
+File not found: '/var/www/system-scripts/welcome.mp4'
+Failed to open /var/www/system-scripts/welcome.mp4.
+
+
+Exiting... (End of file)

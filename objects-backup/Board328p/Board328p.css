@@ -1,0 +1,153 @@
+.Board-setup { 
+	width: 449px; 
+	height: 268px;
+	text-align:left;
+	z-index:2; 
+	position:absolute;
+	background-image:url( 'images/board.png');
+	color:black;
+	font-family:helvetica;
+	font-size:0.9em;
+}
+
+.digital-active {
+    min-width: 30px;
+    min-height: 70px;
+    background-image:url( 'images/here-arrow-white.png');
+    background-repeat: no-repeat;
+
+}
+
+.digital-hover {
+    background-image:url( 'images/here-arrow-white-hover.png');
+}
+
+.digital-active svg *{
+    display: none !important;
+}
+
+.digital-description {
+    position: absolute; 
+    width: 350px; 
+    border-top: 1px solid white; 
+    top: 40px; 
+    left: 50px; 
+    color: white; 
+    text-align: center; 
+    padding-top: 5px;
+}
+
+.i2c-description {
+    position: absolute; 
+    width: 50px; 
+    bottom: 20px; 
+    right: 65px; 
+    color: white; 
+    text-align: center; 
+}
+
+.analog-active {
+    min-width: 30px;
+    min-height: 70px;
+    background-image:url( 'images/here-arrow-yellow1.png');
+    background-repeat: no-repeat;
+    margin: -40px 0px;    
+}
+
+.analog-hover {
+    background-image:url( 'images/here-arrow-yellow-hover.png');
+    margin: -40px 0px;        
+}
+
+.analog-active svg *{
+    display: none !important;
+}
+
+.analog-description {
+    position: absolute; 
+    width: 140px; 
+    border-bottom: 1px solid white; 
+    bottom: 40px; 
+    left: 85px; 
+    color: white; 
+    text-align: center; 
+    padding-bottom: 5px;
+}
+
+.motor-active {
+    min-width: 70px;
+    min-height: 30px;
+    background-image:url( 'images/here-arrow-green.png');
+    background-repeat: no-repeat;
+    margin: 0px -40px;    
+}
+
+.motor-hover {
+    background-image:url( 'images/here-arrow-green-hover.png');
+    margin: 0px -40px;        
+}
+
+.motor-active svg *{
+    display: none !important;
+}
+
+.motor-description {
+    position: absolute; 
+    width: 90px; 
+    border-bottom: 1px solid white; 
+    top: 120px; 
+    right: 10px; 
+    color: white; 
+    text-align: center; 
+    padding-bottom: 5px;
+    
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+
+    /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;    
+}
+
+.lego-active {
+    min-width: 70px;
+    min-height: 30px;
+    background-image:url( 'images/here-arrow-gray.png');
+    background-repeat: no-repeat;
+    margin: 0px 0px;    
+}
+
+.lego-hover {
+    background-image:url( 'images/here-arrow-gray-hover.png');
+    margin: 0px 0px;        
+}
+
+.lego-active svg *{
+    display: none !important;
+}
+
+.lego-description {
+    position: absolute; 
+    width: 150px; 
+    border-bottom: 1px solid white; 
+    top: 120px; 
+    left: -20px; 
+    color: white; 
+    text-align: center; 
+    padding-bottom: 5px;
+    
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+    /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;    
+}

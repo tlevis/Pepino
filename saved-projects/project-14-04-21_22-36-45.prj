@@ -1,0 +1,238 @@
+{
+    "ProjectName": "Demo - Police Light",
+    "ProjectDescription": "Blink pairs of LED",
+    "CurrentIndex": 9,
+    "Ports": [],
+    "ObjArray": {
+        "Main1": {
+            "Chain": {
+                "Next": "LED5"
+            },
+            "Name": "Main",
+            "Id": "Main1",
+            "Position": {
+                "X": "80px",
+                "Y": "120px"
+            },
+            "SetupMode": false
+        },
+        "LED5": {
+            "Chain": {
+                "Next": "LED6"
+            },
+            "Name": "LED",
+            "Id": "LED5",
+            "Port": 2,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "268px",
+                "Y": "105px"
+            },
+            "SetupMode": false,
+            "PWMSourceValue": 0,
+            "PassedVariables": []
+        },
+        "LED6": {
+            "Chain": {
+                "Next": "Delay7"
+            },
+            "Name": "LED",
+            "Id": "LED6",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "HIGH",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "444px",
+                "Y": "107px"
+            },
+            "SetupMode": false,
+            "PWMSourceValue": 0,
+            "PassedVariables": []
+        },
+        "Delay7": {
+            "Chain": {
+                "Next": "LED8"
+            },
+            "Name": "Delay",
+            "Id": "Delay7",
+            "Category": "Functional",
+            "Type": 1,
+            "Source": 0,
+            "Values": ["500", ""],
+            "Position": {
+                "X": "533px",
+                "Y": "261px"
+            },
+            "SetupMode": false
+        },
+        "LED8": {
+            "Chain": {
+                "Next": "LED9"
+            },
+            "Name": "LED",
+            "Id": "LED8",
+            "Port": 2,
+            "Category": "Digital",
+            "Signal": "HIGH",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "622px",
+                "Y": "107px"
+            },
+            "SetupMode": false,
+            "PWMSourceValue": 0,
+            "PassedVariables": []
+        },
+        "LED9": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED9",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "790px",
+                "Y": "105px"
+            },
+            "SetupMode": false,
+            "PWMSourceValue": 0,
+            "PassedVariables": []
+        }
+    },
+    "ObjectsOnSetupAreaMap": {
+        "Board2": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "Board",
+            "Id": "Board2",
+            "Position": {
+                "X": "400px",
+                "Y": "282.5px"
+            },
+            "SetupMode": true
+        },
+        "LED3": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED3",
+            "Port": 2,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "281px",
+                "Y": "96px"
+            },
+            "SetupMode": true,
+            "PWMSourceValue": 0
+        },
+        "LED4": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED4",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "470px",
+                "Y": "77px"
+            },
+            "SetupMode": true,
+            "PWMSourceValue": 0
+        }
+    },
+    "ConnectedObjectsMap": {
+        "LED3": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED3",
+            "Port": 2,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "281px",
+                "Y": "96px"
+            },
+            "SetupMode": true,
+            "PWMSourceValue": 0
+        },
+        "LED4": {
+            "Chain": {
+                "Next": null
+            },
+            "Name": "LED",
+            "Id": "LED4",
+            "Port": 3,
+            "Category": "Digital",
+            "Signal": "LOW",
+            "PortType": 0,
+            "PWMValues": ["0", "", ""],
+            "Position": {
+                "X": "470px",
+                "Y": "77px"
+            },
+            "SetupMode": true,
+            "PWMSourceValue": 0
+        }
+    },
+    "RegisteredValuesMap": {},
+    "ConnectionsMap": {
+        "LED3_OutConnection_NextBoard2_InConnectionDigital_0": {
+            "Area": "device-setup-area",
+            "Source": "LED3_OutConnection_Next",
+            "Target": "Board2_InConnectionDigital_0"
+        },
+        "LED4_OutConnection_NextBoard2_InConnectionDigital_1": {
+            "Area": "device-setup-area",
+            "Source": "LED4_OutConnection_Next",
+            "Target": "Board2_InConnectionDigital_1"
+        },
+        "Main1_OutConnection_NextLED5_InConnection": {
+            "Area": "working-area",
+            "Source": "Main1_OutConnection_Next",
+            "Target": "LED5_InConnection"
+        },
+        "LED5_OutConnection_NextLED6_InConnection": {
+            "Area": "working-area",
+            "Source": "LED5_OutConnection_Next",
+            "Target": "LED6_InConnection"
+        },
+        "LED6_OutConnection_NextDelay7_InConnection": {
+            "Area": "working-area",
+            "Source": "LED6_OutConnection_Next",
+            "Target": "Delay7_InConnection"
+        },
+        "Delay7_OutConnection_NextLED8_InConnection": {
+            "Area": "working-area",
+            "Source": "Delay7_OutConnection_Next",
+            "Target": "LED8_InConnection"
+        },
+        "LED8_OutConnection_NextLED9_InConnection": {
+            "Area": "working-area",
+            "Source": "LED8_OutConnection_Next",
+            "Target": "LED9_InConnection"
+        }
+    }
+}

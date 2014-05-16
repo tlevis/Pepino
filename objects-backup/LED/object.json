@@ -1,0 +1,5 @@
+{
+    "Id" : "LED",
+    "Type" : "Digital",
+    "Defaults": 13
+}

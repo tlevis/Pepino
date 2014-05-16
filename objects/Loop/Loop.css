@@ -1,0 +1,23 @@
+.Loop { 
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	width: 94px; 
+	height: 89px;
+	text-align:left;
+	z-index:20; 
+	position:absolute;
+	background-image:url( 'images/Loop.png');
+	color:black;
+	font-family:helvetica;
+	font-size:0.9em;
+    cursor: pointer;
+}
+
+
+.LoopEndpointLabel { 
+    font-size: 12px; 
+    z-index: 21; 
+    cursor:pointer;
+    font-weight: bold;     
+}
+
