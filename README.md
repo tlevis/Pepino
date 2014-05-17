@@ -20,6 +20,7 @@ __Hardware__
 - Add chip select to Lego sensor ports
 
 __General__
+- Release BOM for the PCB
 - Fix the image hostname
 - Add python program to interact with the serial output
 - Enable the LCD menu buttons
