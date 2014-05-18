@@ -13,6 +13,7 @@ Download Pepino image (based on Raspbian): [pepino-2014-05-16.rar](http://pepino
 __Software__
 - Add more components (operators, sensors, functions, etc.)
 - Upgrade to the latest jsPlumb library
+- Error handling system
 
 __Hardware__
 - Redesign the PCB
