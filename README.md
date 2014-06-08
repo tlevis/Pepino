@@ -6,8 +6,8 @@ Pepino website: [http://pepino.tovilevis.com](http://pepino.tovilevis.com)
 
 Download Pepino image (based on Raspbian): [pepino-2014-05-16.rar](http://pepino.tovilevis.com/files/pepino-2014-05-16.rar) (1.47 GB)
 
-[Working example](https://www.youtube.com/watch?v=DUR5yzSTriI) (Youtube)
-[Drag & Drop programming example](https://www.youtube.com/watch?v=OYBiltbI6gM) (Youtube)
+-[Working example](https://www.youtube.com/watch?v=DUR5yzSTriI) (Youtube)
+-[Drag & Drop programming example](https://www.youtube.com/watch?v=OYBiltbI6gM) (Youtube)
 
 
 # To Do
