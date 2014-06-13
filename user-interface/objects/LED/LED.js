@@ -1,4 +1,4 @@
-var PWMSources = ["Number", "Scope Variable", "Global Variable"];
+var PWMSources = ["Number", "Branch Variable", "Global Variable"];
 
 var LEDSetupSourceEndpoint = {
 	endpoint:"Rectangle",

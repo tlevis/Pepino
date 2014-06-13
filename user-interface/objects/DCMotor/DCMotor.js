@@ -1,4 +1,4 @@
-var DCMotorSpeedSource = ["Number", "Scope Variable", "Global Variable"];
+var DCMotorSpeedSource = ["Number", "Branch Variable", "Global Variable"];
 
 var DCMotorSetupSourceEndpoint = {
 	endpoint:"Rectangle",

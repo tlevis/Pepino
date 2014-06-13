@@ -1,4 +1,4 @@
-var variableSources = ["Number", "Boolean", "String", "Global ariable", "Scope ariable"];
+var variableSources = ["Number", "Boolean", "String", "Global Variable", "Branch Variable"];
 
 var VariableSourceEndpoint = {
 	endpoint:"Dot",
