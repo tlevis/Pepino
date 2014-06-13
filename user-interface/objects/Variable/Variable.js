@@ -22,7 +22,7 @@ function ObjectVariable() {
 	this.Name = "Variable";
     this.Id = this.Name;
 	this.Source = "0";
-    this.Values = ["0", "True", "", "", ""];
+    this.Values = ["0", "true", "", "", ""];
 	this.Position = new ObjectPosition();
     this.PassedVariables;
 }
