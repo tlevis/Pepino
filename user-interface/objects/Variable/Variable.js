@@ -81,7 +81,7 @@ ObjectVariable.prototype.DrawSettingsPanel  = function() {
     var body = "";
     body += "<div style='display: inline-block'><b>Source:</b>&nbsp;&nbsp;</div>";
     
-    body += "<div style='display: inline-block'><select id='" + this.Id + "_source' onchange=\"UpdateSource('" + this.Id + "', this.value)\">";
+    body += "<div style='display: inline-block'><select id='" + this.Id + "_source' onchange=\"VariableUpdateSource('" + this.Id + "', this.value)\">";
     for (var idx in variableSources) {
         body += "<option ";
         if (this.Source == idx) body += " selected=\"selected\" ";
@@ -106,12 +106,12 @@ function GetValueField(Id, source)
             html += "<input type=\"text\" id=\"" + Id +"_value\" value=\"" + ObjectsMap[Id].Values[source] + "\" ";
             if (source == "0")
                 html += " onkeypress=\"return restrictCharacters(this, event, restrictCharactersIntegerOnly); \"";
-            html += " onblur=\"UpdateValue('" + Id + "', " + source + ", this.value)\" style='width: 50px' />";
+            html += " onblur=\"VariableUpdateValue('" + Id + "', " + source + ", this.value)\" style='width: 50px' />";
         }
         break;
         case "1":
         {
-            html += "<select id='" + Id + "_value' onblur=\"UpdateValue('" + Id + "', " + source + ", this.value)\">";
+            html += "<select id='" + Id + "_value' onblur=\"VariableUpdateValue('" + Id + "', " + source + ", this.value)\">";
             html += "<option ";
             if (ObjectsMap[Id].Values[source] == "true") html += " selected=\"selected\" ";
             html += "value='true'>True</option>";
@@ -123,7 +123,7 @@ function GetValueField(Id, source)
         break;        
         case "3":
         {
-            html += "<select id='" + Id + "_value' onblur=\"UpdateValue('" + Id + "', " + source + ", this.value)\">";
+            html += "<select id='" + Id + "_value' onblur=\"VariableUpdateValue('" + Id + "', " + source + ", this.value)\">";
             for (var objId in RegisteredValuesMap) {
                 html += "<option ";
                 if (ObjectsMap[Id].Values[source] == RegisteredValuesMap[objId].VariableName) html += " selected=\"selected\" ";
@@ -134,7 +134,7 @@ function GetValueField(Id, source)
         break;
         case "4":        
         {
-            html += "<select id='" + Id + "_value' onblur=\"UpdateValue('" + Id + "', " + source + ", this.value)\">";
+            html += "<select id='" + Id + "_value' onblur=\"VariableUpdateValue('" + Id + "', " + source + ", this.value)\">";
             for (var objId in ObjectsMap[Id].PassedVariables) {
                 html += "<option ";
                 if (ObjectsMap[Id].Values[source] == ObjectsMap[Id].PassedVariables[objId]) html += " selected=\"selected\" ";
@@ -147,14 +147,14 @@ function GetValueField(Id, source)
     return html;
 }
 
-function UpdateSource(Id, source) {
+function VariableUpdateSource(Id, source) {
     ObjectsMap[Id].Source = source;
     var html = GetValueField(Id, source);
     $("#" + Id + "_source_div").html(html);
 	UpdateCode();
 }
 
-function UpdateValue(Id, source, value) {
+function VariableUpdateValue(Id, source, value) {
     console.log(value);
     ObjectsMap[Id].Values[source] = value;
     UpdateCode();    
