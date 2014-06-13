@@ -132,9 +132,11 @@ function RemoveButton(Id, css) {
 function RemoveObject(Id) {
 	jsPlumb.removeAllEndpoints(Id);
 	delete ObjectsMap[Id];
+    delete ConnectedObjectsMap[Id];
 	var child = document.getElementById(Id);
 	child.parentNode.removeChild(child);
 	ChangePanel(false);
+    UpdateToolBox();
 }
 
 function ShowSettingsPanel(Id, override) {
